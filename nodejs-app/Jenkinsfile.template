@@ -28,7 +28,7 @@ spec:
           """
         }
       }
-         agent { label 'nodejs-app' }
+        
          steps {
             checkout scm
             container('nodejs') {
