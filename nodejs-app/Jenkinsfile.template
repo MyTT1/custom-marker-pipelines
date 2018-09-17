@@ -40,7 +40,8 @@ spec:
             '''
             }
             container('testcafe') {
-          sh '/opt/testcafe/docker/testcafe-docker.sh "chromium --no-sandbox,firefox" tests/*.js -r xunit:res.xml'
+            sh '/opt/testcafe/docker/testcafe-docker.sh "chromium --no-sandbox,firefox" tests/*.js -r xunit:res.xml'
+            }
           }
         }
       }
