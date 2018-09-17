@@ -31,6 +31,7 @@ pipeline {
         submitter "tahminda"
         submitterParameter "APPROVER"
       }
+    }
    }
    options { 
     buildDiscarder(logRotator(numToKeepStr: '2'))
