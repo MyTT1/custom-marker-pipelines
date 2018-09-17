@@ -23,8 +23,7 @@ pipeline {
         beforeAgent true
         branch 'master'
       }
-      
-    options {
+      options {
         timeout(time: 60, unit: 'SECONDS') 
       }
       input {
@@ -32,6 +31,7 @@ pipeline {
         submitter "tahminda"
         submitterParameter "APPROVER"
       }
+    }
    }
    options { 
     buildDiscarder(logRotator(numToKeepStr: '2'))
