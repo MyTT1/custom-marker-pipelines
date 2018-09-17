@@ -8,7 +8,8 @@ pipeline {
             sh 'node --version'
           }
         }
-        stage('Build and Push Image') {
+      }
+      stage('Build and Push Image') {
          when {
             beforeAgent true
             branch 'master'
@@ -16,7 +17,6 @@ pipeline {
          steps {
             echo "TODO - build and push image"
          }
-      }
       }
    }
    options { 
