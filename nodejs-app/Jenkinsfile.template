@@ -23,16 +23,15 @@ pipeline {
         beforeAgent true
         branch 'master'
       }
-      options {
-        timeout(time: 30, unit: 'SECONDS') 
+      
+    options {
+        timeout(time: 60, unit: 'SECONDS') 
       }
       input {
-        message "Should we continue?"
+        message "Should we deploy?"
+        submitter "tahminda"
+        submitterParameter "APPROVER"
       }
-      steps {
-        echo "Continuing with deployment"
-      }
-    }
    }
    options { 
     buildDiscarder(logRotator(numToKeepStr: '2'))
