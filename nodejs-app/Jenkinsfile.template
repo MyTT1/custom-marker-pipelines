@@ -13,7 +13,8 @@ pipeline {
             echo 'Hello World!'   
             sh 'node --version'
             }
-         }
+          }
+        }
         stage('Build and Push Image') {
          when {
             beforeAgent true
