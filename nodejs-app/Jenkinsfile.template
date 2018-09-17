@@ -19,19 +19,20 @@ pipeline {
          }
       }
       stage('Deploy') {
-      when {
-        beforeAgent true
-        branch 'master'
+         when {
+            beforeAgent true
+            branch 'master'
+         }
+         options {
+            timeout(time: 30, unit: 'SECONDS') 
+         }
+         input {
+            message "Should we continue?"
+         }
+         steps {
+            echo "Continuing with deployment"
+         }
       }
-      options {
-        timeout(time: 60, unit: 'SECONDS') 
-      }
-      input {
-        message "Should we deploy?"
-        submitter "tahminda"
-        submitterParameter "APPROVER"
-      }
-    }
    }
    options { 
     buildDiscarder(logRotator(numToKeepStr: '2'))
